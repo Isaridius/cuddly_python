@@ -1,5 +1,5 @@
-x = int(input())
-y = int(input())
+x = int(input("Enter #1:"))
+y = int(input("Enter #2:"))
 
 add = x + y
 subtract = x - y
