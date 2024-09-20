@@ -1,11 +1,12 @@
 x = int(input())
 y = int(input())
 
-lol = x + y
-lmao = x - y
+add = x + y
+subtract = x - y
+multiply = x * y
+divide = x / y
 
-print(f"{x} + {y} = {lol}")
-print(f"{x} - {y} = {lmao}")
-
-
-Awawwawawawwaawwawwawaawa
+print(f"{x} + {y} = {add}")
+print(f"{x} - {y} = {subtract}")
+print(f"{x} * {y} = {multiply}")
+print(f"{x} / {y} = {divide}")
