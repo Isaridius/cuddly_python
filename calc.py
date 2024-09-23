@@ -1,10 +1,20 @@
+# Basic Calculator v2
 
-
-x = int(input("Enter #1:"))
-y = int(input("Enter #2:"))
+# Numeric Input Code held in a function
+def numericInput(prompt: str) -> float:
+    number1 = None
+    while True:
+        try:
+            user_input = input(prompt)
+            number1 = float(user_input)
+            print(f"First Input: {number1}")
+            return number1 # instead of break
+        except ValueError:
+            print(f"{user_input} cannot be converted to a floating point value")
+# end of numericInput()
 
 # User choosing a desired operation
-print('''Please choose one of the following possible operations:
+print('''Please chooses the following possible operations:
 - 1. Add
 - 2. Subtract
 - 3. Multiply
@@ -23,25 +33,27 @@ while True:
         break
 # end of desired operation handling
 
-# Numeric Inputs Only
-number1 = None
-while True:
-    try:
-        user_input = input("Enter number 1:")
-        number1 = float(user_input)
-        print(f"First Input: {number1}")
-        break
-    except ValueError:
-        print(f"{user_input} cannot be converted to a floating point value")        
+# Using our custom numericInput Function
+number1 = numericInput("Enter Number 1: ")
+number2 = numericInput("Enter Number 2: ")
 
+# Doing our desired calculation
+result = None
+if choice == "add":
+    result = number1 + number2
+elif choice == "subtract":
+    result = number1 - number2
+elif choice == "multiply":
+    result = number1 * number2
+elif choice == "divide":
+    # Restrict Division by Zero
+    if choice == "divide":
+        try:
+            result = number1 / number2
+        except ZeroDivisionError:
+            result = None
+            print(f"Since the variable number2 is zero, there is no solution.")
 
-
-#add = x + y
-#subtract = x - y
-#multiply = x * y
-#divide = x / y
-
-#print(f"{x} + {y} = {add}")
-#print(f"{x} - {y} = {subtract}")
-#print(f"{x} * {y} = {multiply}")
-#print(f"{x} / {y} = {divide}")
+# Outputting the result
+if result is not None:
+    print(f"The result is: {result}.")
