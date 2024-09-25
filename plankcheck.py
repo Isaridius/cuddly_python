@@ -15,4 +15,4 @@ leftover = 12*boxes - cans
 totalcost = 14.95*boxes
 
 #output
-print(f"Total cans needed are {cans}. Total boxes of paint are {boxes}. Leftover cans are {leftover}. Total cost is {totalcost})")
+print(f"Total cans needed are {cans}. Total boxes of paint are {boxes}. Leftover cans are {leftover}. Total cost is {totalcost})") 
