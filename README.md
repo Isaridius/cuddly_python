@@ -1,4 +1,1 @@
-This is Andrew Tang code
-It is very very messy
-Plz make sure you have proper precautions before looking at spaghetti
-thx
+Welcome to Andrew Tang's code. It is very bad. His own logic gates are absolutely buns. Therefore, have mercy.
