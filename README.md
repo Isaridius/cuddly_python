@@ -1,1 +1,1 @@
-Welcome to Andrew Tang's code. It is very bad. His own logic gates are absolutely buns. Therefore, have mercy.
+Welcome to the cuddly python repository. Andrew is learning, have mercy. He will get the hang of it.
