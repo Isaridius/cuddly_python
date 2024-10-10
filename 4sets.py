@@ -111,44 +111,43 @@ A set is an unordered collection with no duplicate elements in Python
 
             a.union(b)
             print('Union:', a)
-
-            # Intersection
+        # Intersection
             a = set('abracadabra')
             b = set('alacazam')
 
             a.intersection(b)
             print('Intersection:', a)
 
-            # Difference
+        # Difference
             a = set('abracadabra')
             b = set('alacazam')
 
             a.difference(b)
             print('Difference:', a)
 
-            # Symmeteric Difference
+        # Symmeteric Difference
             a = set('abracadabra')
             b = set('alacazam')
 
             a.symmetric_difference(b)
             print('Symmetric Difference:', a)
 
-            # Subset
+        # Subset
             a = set('abracadabra')
             b = set('alacazam')
 
             print('Subset:', a.issubset(b))
 
-            # Superset
+        # Superset
             a = set('abracadabra')
             b = set('alacazam')
 
             print('Superset:', a.issuperset(b))
             print('--')
 
-            # There are no proper subset/superset methods
+        # There are no proper subset/superset methods
 
-            # copy
+        # copy
             a = set('abracadabra')
             b = a.copy()
             c = a
@@ -158,6 +157,48 @@ A set is an unordered collection with no duplicate elements in Python
             print('set a:', a)
             print('set b:', b)
             print('set c:', c)
+        ASSIGNMENT OPERATION AND UBDATING VARIABLES: This is a way to affect an original set with another and assign the results back to the original
+            # Union and Update --> Update the set, adding elements from all others.
+            a = set('abracadabra')
+            b = set('alacazam')
 
+            a |= b # same as: a.update(b)
+            print('Union Update:', a)
 
-        
+            # Intersection and Update --> Update the set, keeping only elements found in it and all others.
+            a = set('abracadabra')
+            b = set('alacazam')
+
+            a &= b # same as: a.intersection_update(b)
+            print('Intersection Update:', a)
+
+            # Difference and Update --> Update the set, removing elements found in others.
+            a = set('abracadabra')
+            b = set('alacazam')
+
+            a -= b # same as: a.difference_update(b)
+            print('Difference Update:', a)
+
+            # Symmetric Difference and Update --> Update the set, keeping only elements found in either set, but not in both.
+            a = set('abracadabra')
+            b = set('alacazam')
+
+            a ^= b # same as: a.symmetric_difference_update(b)
+            print('Symmeteric Difference Update:', a)
+    Set Comprehension
+        # Set Comprehension Example
+            def isPalindrome(x):
+                # isPalindrome() returns True if string X is a palindrome
+                return x == x[::-1]
+
+            nums = list(range(1,10000))
+            palindromic_set = {num for num in nums if isPalindrome(str(num))}
+
+            print('Palindromic Numbers Set from 1 to 10000:')
+            print(palindromic_set)
+SUMMARY:
+Sets aren’t sliceable nor indexable
+Sets cannot have sets inside them
+Sets do not have order; nor order of insertion
+Sets cannot guarantee that their values will be in order
+Sets do not record a value’s position
