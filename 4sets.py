@@ -48,7 +48,7 @@ A set is an unordered collection with no duplicate elements in Python
 
                 print('set1 - set2:', result1)
                 print('set2 - set1:', result2)
-        Symmetric Difference: ^ Members that only exist in one or the other set, but not both
+        SYMMETRIC DIFFERENCE: ^ Members that only exist in one or the other set, but not both
             # Symmetric Difference Example:
                 set1 = set('hello')
                 set2 = set('world')
@@ -56,7 +56,7 @@ A set is an unordered collection with no duplicate elements in Python
                 result = set1 ^ set2 # ^ is the symmetric difference operator
 
                 print('Symmetric Difference of:', result)
-        Proper subsets: < A proper subset of B  is if all members of A is found in B. But A can't be the exact same.
+        PROPER SUBSETS: < A proper subset of B  is if all members of A is found in B. But A can't be the exact same.
             # Proper Subset Example:
                 set1 = {1,2,3}
                 set2 = {1,2,3,4}
@@ -66,11 +66,11 @@ A set is an unordered collection with no duplicate elements in Python
                 print('Is set1 proper subset of set2?:', set1 < set2) # < is the proper subset operator
                 print('Is set1 proper subset of set3?:', set1 < set3)
                 print('Is set1 proper subset of set4?:', set1 < set4)
-        Subset: A Proper of B is A < B, but A can equal be if we do A <= B
+        SUBSETS: A Proper of B is A < B, but A can equal be if we do A <= B
                 print('Is set1 a subset of set2?:', set1 <= set2) # <= is the subset operator
                 print('Is set1 a subset of set3?:', set1 <= set3) # Notice the difference in value here
                 print('Is set1 a subset of set4?:', set1 <= set4)
-        Proper superset: > or == A is a superset of B if A > B or A == B
+        PROPER SUPERSETS: > or == A is a superset of B if A > B or A == B
             # Superset Example:
                 set1 = {1,2,3,4}
                 set2 = {1,2,3,4}
@@ -85,6 +85,7 @@ A set is an unordered collection with no duplicate elements in Python
         A and B are sets
         if A & B are empty, A and B are considered disjointed.
         we can check this in pythin with setA.isdisjoint(setB)
+        DISJOINT: setA.isdisjoint(setB)
             # Disjoint Example
                 # .isdisjoint() is a set method to check for such property between two sets.
 
@@ -104,5 +105,59 @@ A set is an unordered collection with no duplicate elements in Python
                 set 1 disjoint set 2 check: True
                 set 1 disjoint set 3 check: False
     Set operators as Methods
+        # Union
+            a = set('abracadabra')
+            b = set('alacazam')
+
+            a.union(b)
+            print('Union:', a)
+
+            # Intersection
+            a = set('abracadabra')
+            b = set('alacazam')
+
+            a.intersection(b)
+            print('Intersection:', a)
+
+            # Difference
+            a = set('abracadabra')
+            b = set('alacazam')
+
+            a.difference(b)
+            print('Difference:', a)
+
+            # Symmeteric Difference
+            a = set('abracadabra')
+            b = set('alacazam')
+
+            a.symmetric_difference(b)
+            print('Symmetric Difference:', a)
+
+            # Subset
+            a = set('abracadabra')
+            b = set('alacazam')
+
+            print('Subset:', a.issubset(b))
+
+            # Superset
+            a = set('abracadabra')
+            b = set('alacazam')
+
+            print('Superset:', a.issuperset(b))
+            print('--')
+
+            # There are no proper subset/superset methods
+
+            # copy
+            a = set('abracadabra')
+            b = a.copy()
+            c = a
+
+            a.add('z')
+            print('.copy() examples:')
+            print('set a:', a)
+            print('set b:', b)
+            print('set c:', c)
+
 
         
