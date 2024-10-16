@@ -197,8 +197,8 @@ A set is an unordered collection with no duplicate elements in Python
             print('Palindromic Numbers Set from 1 to 10000:')
             print(palindromic_set)
 SUMMARY:
-Sets aren’t sliceable nor indexable
+Sets aren't sliceable nor indexable
 Sets cannot have sets inside them
 Sets do not have order; nor order of insertion
 Sets cannot guarantee that their values will be in order
-Sets do not record a value’s position
+Sets do not record a value's position

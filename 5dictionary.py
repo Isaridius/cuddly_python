@@ -19,7 +19,7 @@ Updating a dictionary
         Modify existing values by referencing the key
         Add new values by creating a new key
         Overwrite a value at an existing key by referencing and recreating the value for it.
-Dictionary Example
+Dictionary FULL Example
             sammy = {
                 'username': 'sammy',
                 'online': True,
@@ -54,7 +54,7 @@ Deletion
     print('Deleting sammy, should create an error when referenced again', sammy)
 Membership
     We can use the in and not in operators to check if a key exists
-    # Membership Example
+# Membership Example
 
     sammy = {
         'username': 'sammy',
@@ -102,4 +102,100 @@ Duplicating a Dictionary and Copy Keys Only
     print('tammy dict:', tammy)
 Dictionary Methods
     Dictionaries have methods we can use.
-    
+    Let A and B be a dictionary
+    A.keys() returns a sequence of keys/addresses in A
+    A.values() returns a sequence of values in A
+    A.items() returns a sequence of ('key','value')
+    A.update(B) extends A with the dictionary of key,value pairs of B
+# Dictionary Method Examples
+
+    sammy = {
+        'username': 'sammy',
+        'online': True,
+        'followers': 42
+    }
+
+    sammy_hidden = {
+        'pwd' : 'qwerty',
+        'location' : 'Toronto, Ontario'
+    }
+
+    # printing all the keys of a dict
+    print('Sammy Dict Keys:', sammy.keys()) # notice how it prints
+
+    sammy_keys = list(sammy.keys()) # we can listify the .keys() returned
+    print('List of sammy_keys', sammy_keys)
+    print('--')
+
+    # printing all the values of a dict
+    print('Sammy Dict Values:', sammy.values())
+    print('Sammy Dict Values as a list:', list(sammy.values()))
+    print('--')
+
+    # printing key, value pair of a dict
+    print('Sammy Dict key, value pairs:', sammy.items())
+    print('Sammy Dict key, value pairs as a list:', list(sammy.items()))
+    print('--')
+
+    # getting a value from a dict
+    print('Sammy followers value:', sammy.get('followers'))
+    print('Same as:', sammy['followers'])
+    print('--')
+
+    # updating / extending a dictionary
+    sammy.update(sammy_hidden)
+
+    print('Sammy extended with its hidden values:', sammy)
+Iterating a Dictionary
+    There's three methods
+    Iterating the Keys
+    Iterating the Vlaues
+    Iterating the Key, Value pairs by unpacking
+# Iteration Example 1: Keys
+    sammy = {
+        'username': 'sammy',
+        'online': True,
+        'followers': 42
+    }
+
+    for k in sammy.keys(): #only checks keys
+        print('Current key:', k)
+    print('--\n')
+
+    # Iteration Example 2: Values
+
+    for v in sammy.values():
+        print('Current value:', v)
+    print('--\n')
+
+    # Iteration Example 3: Key, Value Pair
+
+    for k, v in sammy.items():
+        print('Current Key:', k)
+        print('Current Value:', v)
+        print()
+dict() Constructor Dictionary Comprehension
+    We can turn other datatypes into dictionaries
+    simiarly to other lists, tuples, and sets, dictionaries can also support comphrehension
+    We have to specify where the keys and the values are tho
+# dict () Example
+    example_data = [
+        ('one', 3),
+        ('two', 3),
+        ('three', 5)
+    ]
+
+    data_dict = dict(example_data)
+    print('data_dict:', data_dict)
+    print('--')
+
+    # Dictionary Comprehension
+    # Goal: Take string numerals and assign them with their integer square
+    # - keys : string numerals
+    # - values: integer squares
+
+    example_data2 = ['1', '2', '3', '4', '5']
+
+    data2_dict = {x : int(x)**2 for x in example_data2}
+
+    print('data2_dict:', data2_dict)
