@@ -1,5 +1,7 @@
 ''' 
 a dictionary is a datatype that stores (key, value) pairs
+
+    dictionary uses {} and is special 
 common operations:
     adding a pair
     removing a pair
