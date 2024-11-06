@@ -1,12 +1,12 @@
 '''
 tuples!
-Tuples are immutable, allows different datatypes, iteral, and nestable.
+Tuples are immutable, allows different datatypes, iterable, and nestable.
     Tupes are ()
 
 
 
 (50,) is a singleton tuple, comma required for one thing
-typles are sliceable, and indexable using square brackers
+tuples are sliceable, and indexable using square brackers
 
 tup = ('C', ' Java', 'Python')
 empty_tup = ()

@@ -3,7 +3,7 @@ A set is an unordered collection with no duplicate elements in Python
 
     sets are {}
 
-    Set is a mathematical way to describe collection of different unique objects.
+    Set is a mathematical way to describe collection of different UNIQUE objects.
     By following the operations and characteristics of the mathematical set, we can utilize such data structure in our Python code.
     The mathematical definition of the set can read in more details here.
     Sets can only contain immutable data type (Commonly Strings and Integers)
